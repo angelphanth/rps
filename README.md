@@ -1,4 +1,4 @@
-# Play Rock Paper Scissors against your computer using your webcam! 
+# Playing Rock Paper Scissors against the Computer using a Webcam! 
 
 Using deep learning (VGG16) to classify hand-gestures for a Rock Paper Scissors (RPS) game. 
 
