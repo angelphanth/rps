@@ -1,12 +1,13 @@
-# Playing Rock Paper Scissors against the Computer using a Webcam! 
-
+## Playing Rock Paper Scissors against the Computer using a Webcam! 
 Using deep learning (VGG16) to classify hand-gestures for a Rock Paper Scissors (RPS) game. 
 
 ![demo](demo.gif)
 
-For this project I sought to create a RPS game where you could play against the computer using your webcam. 
+### Project Summary
 
-In order to achieve this I first had to train a Convolutional Neural Network (CNN) to classify RPS hand-gestures from images and then evaluate the CNNs performance on new images. 
+I sought to create a RPS game where you could play against the computer using your webcam. 
+
+In order to achieve this I first had to train a Convolutional Neural Network (CNN) to classify RPS hand-gestures from images and then evaluate the CNNs performance on new images (i.e., a test set of images, and images taken from a webcam). 
 
 A VGG16 CNN was trained on a combined dataset of [CGI-generated images created by Laurence Moroney](http://www.laurencemoroney.com/rock-paper-scissors-dataset/) and [real-life images created by Kaggle user drgfreeman](https://www.kaggle.com/drgfreeman/rockpaperscissors#README_rpc-cv-images.txt). 
 
@@ -26,9 +27,9 @@ The VGG16 that achieved the highest accuracy score on the validation set of trai
 
 The `best_model`'s performance was then tested on the test set of images and achieved an accuracy score of 99.3% and precision, recall and f1 scores of 96 - 100%. 
 
-The best VGG16 model was then tested on new test images taken in real-time from a 640x480 webcam capture in notebook `real-time_test.ipynb`. On the new images (displayed in the notebook), the model achieved an accuracy score of 90% and precission, recall and f1 scores of 77 - 100%. 
+In notebook `real-time_test.ipynb`, the best VGG16 model was then tested on 120 (40 per class) new images taken in real-time from 640x480 webcam capture. On the new images (displayed in the notebook), the model achieved an accuracy score of 90% and precission, recall and f1 scores of 77 - 100%. 
 
-Now equipped with a CNN model that could classify RPS hand-gestures from webcam images, I implemented the model in a RPS game created in the notebook `rps_against_cpu.ipynb`. 
+Now equipped with a CNN model that could classify RPS hand-gestures from webcam images, the model was implemented in a RPS game created in the notebook `rps_against_cpu.ipynb`. 
 
 This was accomplished by creating a series of functions responsible for: 
 
@@ -42,4 +43,10 @@ This was accomplished by creating a series of functions responsible for:
 
 - Summarizing the results of all matches in a series of plotly visualizations. 
 
-Please see the aforementioned notebooks for a thorough breakdown of the project and feel free to message me on [linkedin](https://www.linkedin.com/in/angelphanth/) if you had any questions! 
+**Please see the aforementioned notebooks for a thorough breakdown of the project and feel free to message me on [LinkedIn](https://www.linkedin.com/in/angelphanth/) if you had any questions!** 
+
+Or if you were interested in re-creating the game to play on your own computer: 
+
+- The datasets are linked above and in `image_preprocessing.ipynb`, and 
+
+- I have included `keras_gpu.txt` and `keras_cpu.txt` that you can use to create a conda environment (e.g. `conda env create --file keras_gpu.txt`) where you can train a CNN using your GPU or CPU, respectively. The environments also include the usual python libraries, Open CV, plotly and should allow you to use Jupyter notebook (and all the aforementioned notebooks).  
