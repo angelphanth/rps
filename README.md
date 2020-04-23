@@ -9,7 +9,7 @@ I sought to create a RPS game where you could play against the computer using yo
 
 In order to achieve this I first had to train a Convolutional Neural Network (CNN) to classify RPS hand-gestures from images and then evaluate the CNNs performance on new images (i.e., a test set of images, and images taken from a webcam). 
 
-A VGG16 CNN was trained on a combined dataset of [CGI-generated images created by Laurence Moroney](http://www.laurencemoroney.com/rock-paper-scissors-dataset/) and [real-life images created by Kaggle user drgfreeman](https://www.kaggle.com/drgfreeman/rockpaperscissors#README_rpc-cv-images.txt). 
+A VGG16 CNN was trained on a combined dataset of [CGI-generated images created by Laurence Moroney](http://www.laurencemoroney.com/rock-paper-scissors-dataset/) and [real-life images](https://www.kaggle.com/drgfreeman/rockpaperscissors#README_rpc-cv-images.txt) created by [DrGFreeman](https://github.com/DrGFreeman). 
 
 The real-life RPS images underwent preprocessing in `image_preprocessing.ipynb` to have similar formatting as the CGI-generated RPS images. The preprocessing included:
 
@@ -49,4 +49,4 @@ Or if you were interested in re-creating the game to play on your own computer:
 
 - The datasets are linked above and in `image_preprocessing.ipynb`, and 
 
-- I have included `keras_gpu.txt` and `keras_cpu.txt` that you can use to create a conda environment (e.g. `conda env create --file keras_gpu.txt`) where you can train a CNN using your GPU or CPU, respectively. The environments also include the usual python libraries, Open CV, plotly and should allow you to use Jupyter notebook (and all the aforementioned notebooks).  
+- I have included `keras_gpu.txt` and `keras_cpu.txt` that you can use to create a conda environment (e.g. `conda env create --file keras_gpu.txt`) where you can train a CNN using your GPU or CPU, respectively. The environments also include the usual python libraries, Open CV, plotly and should allow you to use Jupyter notebook (and all the notebooks in this repo).  
